@@ -27,7 +27,6 @@ for(var i =1; i<=lastDay; i++){
         var result = i.toString() + ' - medicine';
         console.log(result)
         
-
     }
     else {
          var result = i.toString() + ' - rest';
@@ -53,3 +52,23 @@ else if(fileName.endsWith('.docx')){
 else{
     console.log('Delete')
 }
+
+
+/** Problem 05 - ( PH Email Generator )  */
+var student= { name: "jhankar" , roll: 1014 ,department: "cse" };
+//write your code here
+var email = student.name+student.roll.toString()+'.'+student.department+'@ph.ac.bd';
+console.log(email);
+
+
+/** Problem 06 :  (Current Salary )  */
+var experience =3
+var startingSalary = 15000
+//write your code here
+  var totalYear = experience;
+  var presentSalary =startingSalary;
+  for(var yearCount =1; yearCount<=totalYear; yearCount++){
+    presentSalary=presentSalary+(presentSalary*0.05);
+  }
+  var salary= presentSalary.toFixed(2);
+  console.log(salary)
