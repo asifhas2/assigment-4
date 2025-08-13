@@ -9,4 +9,4 @@ function totalFine( fare ) {
     return fine;
 
 }
-console.log(totalFine(200)) 
+console.log(totalFine(-77)) 

@@ -32,9 +32,6 @@ if(typeof player1 !=='object'){
 else if(typeof player2 !=='object'){
     return 'Invalid'
 }
-else if(Array.isArray(player1) || Array.isArray(player2)){
-     return 'Invalid'
-}
 
 let team1 = player1.foul + player1.cardY + player1.cardR;
 let team2 = player2.foul + player2.cardY + player2.cardR;
@@ -71,3 +68,50 @@ function  isSame(arr1 , arr2 ) {
 return true;
 
 }
+
+
+function  resultReport( marks ) {
+          // You have to write your code here
+if(!Array.isArray(marks)){
+    return 'Invalid'
+}
+    
+let fainalScore = 0;
+let pass = 0;
+let fail = 0;
+for(let i =0; i<marks.length; i++){
+    fainalScore = fainalScore + marks[i];
+
+//    fainalScore = Score/marks.length;
+
+
+    if(marks[i]>= 40){
+        pass++;
+    }
+    else{
+        fail++;
+    }
+}
+let avg = fainalScore/marks.length;
+let avgFloor = Math.floor(avg);
+if(Number.isNaN(avgFloor)){
+    avgFloor = 0;
+}
+
+const result = {
+ finalScore:avgFloor,
+ pass:pass,
+ fail:fail
+} 
+
+return result;
+        
+}
+
+
+// console.log(totalFine(200))
+// console.log(onlyCharacter("  h e llo wor   ld" ))
+// console.log(bestTeam({ name: "Germany", foul: 12, cardY: 0, cardR: 0 },
+// { name: "Sweden", foul: 7, cardY: 4, cardR: 1 }))
+// console.log(isSame([1, undefined , 3] , [1,null ,3]))
+// console.log(resultReport(100))
