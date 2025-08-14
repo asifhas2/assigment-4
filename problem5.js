@@ -35,5 +35,5 @@ const result = {
 return result;
         
 }
-let result =[98, 87, 67, 91, 92, 33, 87]
+let result =[]
 console.log(resultReport(result))

@@ -32,6 +32,9 @@ if(typeof player1 !=='object'){
 else if(typeof player2 !=='object'){
     return 'Invalid'
 }
+else if(Array.isArray(player1) || Array.isArray(player2)){
+     return 'Invalid'
+}
 
 let team1 = player1.foul + player1.cardY + player1.cardR;
 let team2 = player2.foul + player2.cardY + player2.cardR;
@@ -112,8 +115,8 @@ return result;
 
 // console.log(totalFine(200))
 // console.log(onlyCharacter("  h e llo wor   ld" ))
-// console.log(bestTeam({ name: "Germany", foul: 12, cardY: 0, cardR: 0 },
-// { name: "Sweden", foul: 7, cardY: 4, cardR: 1 }))
+// console.log(bestTeam([{ name: "Germany", foul: 12, cardY: 0, cardR: 0 },
+// { name: "Sweden", foul: 7, cardY: 4, cardR: 1 }]))
 // console.log(isSame([1, undefined , 3] , [1,null ,3]))
 // console.log(resultReport(100))
 

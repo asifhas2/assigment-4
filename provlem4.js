@@ -15,5 +15,5 @@ function  isSame(arr1 , arr2 ) {
 return true;
 
 }
-console,console.log( isSame([1 , 4 , 5], [1 , 4 , 5]));
+console,console.log( isSame([1 , 4 , 5], 'sjssgg'));
 
