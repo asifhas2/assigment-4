@@ -23,11 +23,11 @@ else if(team1 = team2){
 else if(team2<team1){
     return player2.name
 }
-    
+// console.log(typeof player1);
 
 }
 
 let player = bestTeam({ name: "Brazil", foul: 5, cardY: 1, cardR: 0 },
 { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
  )
-console.log(player);
+console.log( player);
